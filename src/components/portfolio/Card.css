@@ -1,0 +1,22 @@
+.parent {
+  position: relative;
+}
+/* .parent img:hover {
+  background-color: black;
+  opacity: 0.2;
+} */
+.hello {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  height: 300px;
+  width: 300px;
+  color: black;
+  transition: 1s;
+  opacity: 0;
+  /* transition: 0.3s; */
+}
+.hello:hover {
+  opacity: 1;
+}
