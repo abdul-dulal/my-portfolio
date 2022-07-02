@@ -9,7 +9,7 @@ import myImage from "../../assets/myImage.jpg";
 const About = () => {
   return (
     <>
-      <div id="about" className="text-center py-00">
+      <div id="about" className="text-center py-10">
         <h4 className=" text-primary text-4xl z-0  relative  inline-block px-1 font-semibold uppercase after:absolute after:-bottom-6 after:right-0 after:-z-10 after:h-1 after:w-16 after:mr-9 after:-translate-y-2 after:bg-primary after:content-['']">
           About
         </h4>
@@ -51,56 +51,84 @@ const About = () => {
               I'm a Front-End Developer. I have serious passion for UI effects,
               <br /> animations and creating intuitive, dynamic user
               experiences. <br />
-              <span className="text-[#00A1A7]">
+              <span className="text-[#00A1A7] font-bold">
                 Let's make something special.
               </span>
             </p>
           </div>
         </div>
-        <div className=" flex  items-center">
+        <div className=" flex  items-center px-4 lg:px-0">
           <div>
-            <h1 className="text-3xl font-bold text-primary">Skills</h1>
+            <h1 className="text-3xl font-bold  lg:text-primary">Skills</h1>
             <div className="mt-2">
               <h1 className="text-xl font-bold text-primary  mb-2">
                 Front-End
               </h1>
-              <div className="flex  my-2">
-                <p className="bg-secondary text-white px-4 py-0 overflow-hidden">
-                  HTML
-                </p>
-                <p className="bg-secondary text-white px-4 py-0 ml-2">CSS</p>
-                <p className="bg-secondary text-white px-4 py-0 ml-2">
-                  Tailwind
-                </p>
-                <p className="bg-secondary text-white px-4 py-0 ml-2">
-                  Bootstrap
-                </p>
-
-                <p className="bg-secondary text-white px-4 py-0 ml-2">
-                  JavaScript
-                </p>
-
-                <p className="bg-secondary text-white px-4 py-0 ml-2 ">React</p>
+              <div className="">
+                <ul className="flex flex-col lg:flex-row  my-2 gap-3">
+                  <li className="bg-secondary text-white ml-2 px-4 py-0 overflow-hidden">
+                    HTML
+                  </li>
+                  <li>
+                    <li className="bg-secondary text-white px-4 py-0 ml-2">
+                      CSS
+                    </li>
+                  </li>
+                  <li className="bg-secondary text-white px-4 py-0 ml-2">
+                    Tailwind
+                  </li>
+                  <li className="bg-secondary text-white px-4 py-0 ml-2">
+                    Bootstrap
+                  </li>
+                  <li className="bg-secondary text-white px-4 py-0 ml-2">
+                    JavaScript
+                  </li>
+                  <li className="bg-secondary text-white px-4 py-0 ml-2 ">
+                    React
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="mt-2">
               <h1 className="text-xl font-bold text-primary  mb-2">Back-End</h1>
-              <div className="flex  my-2">
-                <p className="bg-secondary text-white px-4 py-0 overflow-hidden">
-                  Node Js
-                </p>
-                <p className="bg-secondary text-white px-4 py-0 ml-2">
-                  Express Js
-                </p>
-                <p className="bg-secondary text-white px-4 py-0 ml-2">
-                  MongoDb
-                </p>
-
-                <p className="bg-secondary text-white px-4 py-0 ml-2">
-                  JavaScript
-                </p>
-
-                <p className="bg-secondary text-white px-4 py-0 ml-2 ">React</p>
+              <div className="">
+                <ul className="flex flex-col lg:flex-row  my-2 gap-3">
+                  <li className="bg-secondary text-white ml-2 px-4 py-0 overflow-hidden">
+                    Node Js
+                  </li>
+                  <li className="bg-secondary text-white px-4 py-0 ml-2">
+                    Express Js
+                  </li>
+                  <li className="bg-secondary text-white px-4 py-0 ml-2">
+                    MongoDb
+                  </li>
+                  <li className="bg-secondary text-white px-4 py-0 ml-2">
+                    Firebase Authentication
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-2">
+              <h1 className="text-xl font-bold text-primary  mb-2">Tools</h1>
+              <div className="">
+                <ul className="flex flex-col lg:flex-row  my-2 gap-3">
+                  <li className="ml-2 bg-secondary text-white px-4 py-0 overflow-hidden">
+                    Vs Code
+                  </li>
+                  <li className="bg-secondary text-white px-2 py-0 ml-2">
+                    Git
+                  </li>
+                  <li className="bg-secondary text-white px-2 py-0 ml-2">
+                    Chroome Dev Tools
+                  </li>
+                  <li className="bg-secondary text-white px-2 py-0 ml-2">
+                    Firebase
+                  </li>
+                  <li className="bg-secondary text-white px-2 py-0 ml-2">
+                    Netlify
+                  </li>
+                  <li className="bg-secondary text-white  py-0 ml-2">Heroku</li>
+                </ul>
               </div>
             </div>
           </div>

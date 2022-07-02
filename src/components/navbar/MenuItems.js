@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 
-import { AiOutlineClose } from "react-icons/ai";
-
 const MenuItems = ({ active }) => {
   return (
     <div>

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import MenuItems from "./MenuItems";
 import { HiOutlineMenu } from "react-icons/hi";
+import Scrollspy from "react-scrollspy";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const show = () => {
@@ -19,28 +21,62 @@ const Navbar = () => {
           </div>
           <ul className="hidden lg:flex gap-8 lg:h-14 items-center lg:px-48 text-white text-[18px] uppercase">
             <li className=" ">
-              <Link activeClass="active" smooth spy to="about">
+              <Link
+                to="/"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="cursor-pointer"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link activeClass="active" smooth spy to="portfolio">
-                Protfolio
-              </Link>
-            </li>
-            <li>
-              <Link activeClass="active" smooth spy to="about">
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="cursor-pointer"
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link activeClass="active" smooth spy to="blog">
+              <Link
+                to="portfolio"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Protfolio
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                smooth
+                spy
+                to="blog"
+                className="cursor-pointer"
+              >
                 BLOG
               </Link>
             </li>
 
             <li>
-              <Link activeClass="active" smooth spy to="contact">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="cursor-pointer"
+              >
                 CONTACT ME
               </Link>
             </li>
