@@ -13,7 +13,7 @@ const Footer = () => {
     });
   };
   return (
-    <div className="bg-[#252934]">
+    <div className="bg-[#111827]">
       <div className="relative mt-0">
         <span
           className="block mx-auto bg-secondary cursor-pointer text-3xl h-14 text-white  w-14"

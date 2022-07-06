@@ -1,5 +1,42 @@
 [
   {
-    "img": "https://ibb.co/ZXdrq1H"
+    "img": "https://i.ibb.co/vq1W0vs/slider3.png",
+    "img1": "https://i.ibb.co/G2rvpzW/slider2.png",
+    "img2": "https://i.ibb.co/D7Yh8zK/bagdom-font.png",
+    "img3": "https://i.ibb.co/FKHLDdy/slider1-2.png",
+    "status": "node",
+    "web": "Manufacture Tools Shop",
+    "tech": "Node || React",
+    "live": "https://bagdom-132e6.web.app/",
+    "code": "https://github.com/abdul-dulal/Manufacture-Tools-Shop-Client",
+    "id": "1",
+    "f1": "✅ A full-stack single-page ecommerce web app where people can take and book services.",
+    "f2": "✅ Login system with firebase and private routes.",
+    "f3": "✅ Dashboard for users and admins where admins can do CRUD operations and users can give reviews and monitor their booking list."
+  },
+  {
+    "img": "https://i.ibb.co/r46CyRD/redonion-Font.png",
+    "status": "node",
+    "web": "Red Onion",
+    "img1": "https://i.ibb.co/sP3qZdM/red-onion-3.png",
+    "img2": "https://i.ibb.co/5MrcN4n/red-onion1.png",
+    "img3": "https://i.ibb.co/fHDY478/red-onion-2.png",
+    "tech": "Node || React",
+    "id": "2",
+    "live": "https://red-onion-a5d19.web.app/",
+    "code": "https://github.com/abdul-dulal/red-onion",
+    "f1": "✅ A full-stack single-page e-commerce food web app.",
+    "f2": "✅ Login system with firebase and private routes.",
+    "f3": "✅ Users can buy products and see their purchase records on the order page. "
+  },
+  {
+    "img": "https://i.ibb.co/D1ZqVBk/phone3.png",
+    "status": "js",
+    "id": "3"
+  },
+  {
+    "img": "https://i.ibb.co/cF4N2xQ/3.jpg",
+    "status": "js",
+    "id": "4"
   }
 ]

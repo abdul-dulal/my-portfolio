@@ -1,13 +1,9 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowDown } from "react-icons/ai";
 import { Link } from "react-scroll";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import About from "../about/About";
-import Contact from "../contact/Contact";
-import Footer from "../Footer";
-import Navbar from "../navbar/Navbar";
-import Portfolio from "../portfolio/Portfolio";
 
 const Home = () => {
   const particlesInit = async (main) => {
@@ -111,15 +107,19 @@ const Home = () => {
           </p>
           <Link
             to="portfolio"
-            className="flex items-center cursor-pointer ml-16 mt-6 lg:ml-24 border-[3px] text-[20px] border-white px-4 py-3 w-[250px] my-3 hover:bg-[#04C2C9] hover:border-0 hover:text-white"
+            className="flex items-center  cursor-pointer border-[3px] ml-16 mt-6 lg:ml-24  text-[20px] border-white px-4 py-3 w-[250px] my-3 hover:bg-[#04C2C9] hover:border-[3px] hover:border-[#04C2C9] hover:text-white "
             spy={true}
             smooth={true}
             offset={50}
             duration={500}
+            style={{}}
           >
             View my work
-            <span className="ml-3">
+            {/* <span className="ml-3 ">
               <AiOutlineArrowRight />
+            </span> */}
+            <span className="ml-3 ">
+              <AiOutlineArrowDown />
             </span>
           </Link>
         </div>
