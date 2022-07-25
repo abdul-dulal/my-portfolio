@@ -1,32 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { FiEye } from "react-icons/fi";
 import "./Card.css";
+import Modal from "./Modal";
+import { motion } from "framer-motion";
 const All = () => {
   const [alldata, setAlldata] = useState([]);
+  const [popup, setPopup] = useState();
   useEffect(() => {
     fetch("Portfolio.json")
       .then((res) => res.json())
       .then((data) => setAlldata(data));
   }, []);
   return (
-    <div className="grid grid-cols-3 px-48 gap-5">
-      {alldata.map((data) => (
-        <div className="parent">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:px-48 gap-5">
+      {alldata.map((data, i) => (
+        <motion.div
+          className="parent"
+          initial={{ opacity: 0, translateX: i % 2 === 0 ? -50 : 50 }}
+          animate={{ opacity: 1, translateX: 0, translateY: 0 }}
+          transition={{ duration: 0.3, delay: i * 0.8 }}
+        >
           <div className="">
-            <img src={data.img} className="h-[300px] w-full" alt="" />
+            <img src={data.img} className="h-[320px] w-full" alt="" />
           </div>
 
-          <div className="hello">
-            <a
-              href="https://red-onion-a5d19.web.app/"
-              target="black"
-              className="cursor-pointer bg-secondary text-white w-32 h-12 mt-3 rounded font-bold py-2 flex items-center  duration-1000 hover:bg-white hover:text-secondary "
+          <div className=" text-center hello">
+            <h1 className=" font-bold text-2xl text-black  mt-8">{data.web}</h1>
+            <h2 className="text-xl text-secondary pb-10">{data.tech}</h2>
+            <label
+              for="my-modal-4"
+              onClick={() => setPopup(data.id)}
+              className=" modal-button cursor-pointer text-black text-xl uppercase  border-2 border-secondary px-10 py-3"
             >
-              Live Site <FiEye className="ml-3 mt-1 font-bold" />
-            </a>
+              Learn More
+            </label>
           </div>
-        </div>
+        </motion.div>
       ))}
+      <Modal popup={popup} />
     </div>
   );
 };

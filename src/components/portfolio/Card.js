@@ -1,61 +1,54 @@
-import React, { useState } from "react";
-import "./Card.css";
-import { FiEye } from "react-icons/fi";
-import { BsCodeSlash } from "react-icons/bs";
-const Card = ({ img, tech, webTitle, button }) => {
-  return (
-    <div className=" parent">
+<div className=" flex  items-center px-4 lg:px-0">
+  <div>
+    <h1 className="text-3xl font-bold  lg:text-primary">Skills</h1>
+    <div className="mt-2">
+      <h1 className="text-xl font-bold text-primary  mb-2">Front-End</h1>
       <div className="">
-        <img src={img} className="h-[300px] w-[450px]" alt="" />
-      </div>
-
-      <div className=" hello ">
-        <h1 className="text-2xl font-bold text-primary mt-3">{webTitle}</h1>
-        <p className="text-secondary text-xl pb-11">{tech}</p>
-
-        {button === "node1" ? (
-          <div className="flex gap-4">
-            <a
-              href="https://bagdom-132e6.web.app/"
-              target="blank"
-              className="cursor-pointer bg-secondary text-white px-6 rounded font-bold py-2 flex items-center  duration-1000 hover:bg-white hover:text-secondary "
-            >
-              Live Site <FiEye className="ml-3 mt-1 font-bold" />
-            </a>
-            <a
-              href="https://github.com/abdul-dulal/Manufacture-Tools-Shop-Client"
-              target="blank"
-              className="cursor-pointer bg-secondary text-white px-6 rounded font-bold py-2 flex items-center  duration-1000 hover:bg-white hover:text-secondary"
-            >
-              View Code <BsCodeSlash className="ml-3 mt-1 font-bold" />
-            </a>
-          </div>
-        ) : (
-          ""
-        )}
-        {button === "node2" ? (
-          <div className="flex gap-4">
-            <a
-              href="https://red-onion-a5d19.web.app/"
-              target="black"
-              className="cursor-pointer bg-secondary text-white px-6 rounded font-bold py-2 flex items-center  duration-1000 hover:bg-white hover:text-secondary "
-            >
-              Live Site <FiEye className="ml-3 mt-1 font-bold" />
-            </a>
-            <a
-              href="https://github.com/abdul-dulal/red-onion"
-              target="blank"
-              className="cursor-pointer bg-secondary text-white px-6 rounded font-bold py-2 flex items-center  duration-1000 hover:bg-white hover:text-secondary"
-            >
-              View Code <BsCodeSlash className="ml-3 mt-1 font-bold" />
-            </a>
-          </div>
-        ) : (
-          ""
-        )}
+        <ul className="flex flex-col lg:flex-row  my-2 gap-3">
+          <li className="bg-secondary text-white ml-2 px-4 py-0 overflow-hidden">
+            HTML
+          </li>
+          <li>
+            <li className="bg-secondary text-white px-4 py-0 ml-2">CSS</li>
+          </li>
+          <li className="bg-secondary text-white px-4 py-0 ml-2">Tailwind</li>
+          <li className="bg-secondary text-white px-4 py-0 ml-2">Bootstrap</li>
+          <li className="bg-secondary text-white px-4 py-0 ml-2">JavaScript</li>
+          <li className="bg-secondary text-white px-4 py-0 ml-2 ">React</li>
+        </ul>
       </div>
     </div>
-  );
-};
-
-export default Card;
+    <div className="mt-2">
+      <h1 className="text-xl font-bold text-primary  mb-2">Back-End</h1>
+      <div className="">
+        <ul className="flex flex-col lg:flex-row  my-2 gap-3">
+          <li className="bg-secondary text-white ml-2 px-4 py-0 overflow-hidden">
+            Node Js
+          </li>
+          <li className="bg-secondary text-white px-4 py-0 ml-2">Express Js</li>
+          <li className="bg-secondary text-white px-4 py-0 ml-2">MongoDb</li>
+          <li className="bg-secondary text-white px-4 py-0 ml-2">
+            Firebase Authentication
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div className="mt-2">
+      <h1 className="text-xl font-bold text-primary  mb-2">Tools</h1>
+      <div className="">
+        <ul className="flex flex-col lg:flex-row  my-2 gap-3">
+          <li className="ml-2 bg-secondary text-white px-4 py-0 overflow-hidden">
+            Vs Code
+          </li>
+          <li className="bg-secondary text-white px-2 py-0 ml-2">Git</li>
+          <li className="bg-secondary text-white px-2 py-0 ml-2">
+            Chroome Dev Tools
+          </li>
+          <li className="bg-secondary text-white px-2 py-0 ml-2">Firebase</li>
+          <li className="bg-secondary text-white px-2 py-0 ml-2">Netlify</li>
+          <li className="bg-secondary text-white  py-0 ml-2">Heroku</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>;

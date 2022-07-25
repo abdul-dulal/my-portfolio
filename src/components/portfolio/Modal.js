@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrllbar, A11y } from "swiper";
+import { Navigation, Pagination, A11y } from "swiper";
 const Modal = ({ popup }) => {
   const [some, setSome] = useState([]);
   useEffect(() => {
@@ -27,21 +27,21 @@ const Modal = ({ popup }) => {
                 spaceBetween={10}
                 slidesPerView={1}
                 navigation
-                pagination={{ clickable: true }}
+                // pagination={{ clickable: true }}
                 onSwiper={(swiper) => ""}
                 onSlideChange={() => ""}
               >
                 <SwiperSlide>
-                  <img src={e.img1} className="w-[300px] h-[300px]" alt="" />
+                  <img src={e.img1} className="w-full h-[400px]" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={e.img2} alt="" />
+                  <img src={e.img2} className="w-full h-[400px]" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={e.img3} alt="" />
+                  <img src={e.img3} className="w-full h-[400px]" alt="" />
                 </SwiperSlide>
               </Swiper>
-              <div className="space-y-2">
+              <div className="space-y-2 mt-10">
                 <h1 className="text-xl text-primary font-bold">{e.web}</h1>
                 <p> {e.f1}</p>
                 <p> {e.f2}</p>
@@ -50,14 +50,14 @@ const Modal = ({ popup }) => {
               <div className="flex mt-5">
                 <a
                   href={e.live}
-                  className=" flex bg-secondary uppercase w-36 font-bold  py-3  text-white px-4 rounded"
+                  className=" flex bg-secondary uppercase w-[150px] font-bold  py-3  text-white px-4 rounded hover:text-black hover:bg-white duration-700 hover:border-2 hover:border-secondary"
                   target="blank"
                 >
                   view site <AiOutlineEye className="text-2xl ml-2" />
                 </a>
                 <a
                   href={e.code}
-                  className=" flex bg-secondary ml-5 uppercase w-[160px] font-bold  py-3 text-white px-4 rounded"
+                  className=" flex bg-secondary ml-5 uppercase w-[160px] font-bold  py-3 text-white px-4 rounded hover:text-black hover:bg-white duration-700 hover:border-2 hover:border-secondary"
                   target="blank"
                 >
                   view code <BsCodeSlash className="text-2xl ml-2" />
@@ -65,7 +65,6 @@ const Modal = ({ popup }) => {
               </div>
             </div>
           ))}
-          <div></div>
         </label>
       </label>
     </div>

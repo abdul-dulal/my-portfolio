@@ -30,13 +30,39 @@
     "f3": "✅ Users can buy products and see their purchase records on the order page. "
   },
   {
-    "img": "https://i.ibb.co/D1ZqVBk/phone3.png",
-    "status": "js",
-    "id": "3"
+    "img": "https://i.ibb.co/dggJxF2/portfolio-font.png",
+    "status": "front",
+    "web": "Portfolio",
+    "img1": "https://i.ibb.co/cgdVSJW/portfolio3.png",
+    "img2": "https://i.ibb.co/RcLmCBf/portfolio1.png",
+    "img3": "https://i.ibb.co/0ZWqpFL/portfolio2.png",
+    "tech": "React",
+    "id": "3",
+    "live": "https://abdul-dulal-portfolio.netlify.app/",
+    "code": "https://github.com/abdul-dulal/my-portfolio"
   },
   {
-    "img": "https://i.ibb.co/cF4N2xQ/3.jpg",
+    "img": "https://i.ibb.co/3hmJzw9/h2gfornt.png",
+    "status": "front",
+    "web": "h2g Start Up",
+    "img1": "https://i.ibb.co/BK6Hjhd/h2g2.png",
+    "img2": "https://i.ibb.co/7vxtkFr/h2gfront3.png",
+    "img3": "https://i.ibb.co/mFB9wZq/h2g1.png",
+    "tech": "React",
+    "id": "4",
+    "live": "https://abdul-dulal-portfolio.netlify.app/",
+    "code": "https://github.com/abdul-dulal/h2g"
+  },
+  {
+    "img": "https://i.ibb.co/hgCwpJv/phone-font.png",
     "status": "js",
-    "id": "4"
+    "web": "Phone-Hunter",
+    "img1": "https://i.ibb.co/D1ZqVBk/phone3.png",
+    "img2": "https://i.ibb.co/DYwC3wr/phone2.png",
+    "img3": "https://i.ibb.co/q9mSs73/phone1.png",
+    "tech": "JavaScript || DOM",
+    "id": "5",
+    "live": "https://awesomephone.netlify.app/",
+    "code": "https://github.com/abdul-dulal/phone-hunter"
   }
 ]

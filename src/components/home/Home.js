@@ -4,6 +4,7 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import { Link } from "react-scroll";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import ScrollToTop from "react-scroll-to-top";
 
 const Home = () => {
   const particlesInit = async (main) => {
@@ -15,12 +16,14 @@ const Home = () => {
   const particlesLoaded = (container) => {
     console.log(container);
   };
+  const active = "h-96";
   return (
     <>
-      {/* <Particles
+      <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
+        height={active}
         options={{
           background: {
             color: {},
@@ -91,7 +94,7 @@ const Home = () => {
           },
           detectRetina: true,
         }}
-      /> */}
+      />
 
       <div
         id="/"
@@ -124,6 +127,12 @@ const Home = () => {
           </Link>
         </div>
       </div>
+      <ScrollToTop
+        viewBox="0 0 175 256"
+        smooth={true}
+        top={20}
+        color="#E31B6D"
+      />
     </>
   );
 };

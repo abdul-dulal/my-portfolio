@@ -4,15 +4,11 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Navbar from "./components/navbar/Navbar";
 import { ToastContainer } from "react-toastify";
-import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import Modal from "./components/portfolio/Modal";
+import "../src/App.css";
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/button/:id" element={<Modal />} />
-      </Routes>
       <Home />
       <Navbar />
       <About />

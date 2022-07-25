@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import responsvie from "../../assets/icon/responsive.png";
 import fast from "../../assets/icon/fast.png";
 import inutive from "../../assets/icon/inn.png";
 import dynamic from "../../assets/icon/dynamic.png";
 import AboutChild from "./AboutChild";
 import myImage from "../../assets/myImage.jpg";
+import Skills from "./Skills";
+import Certifications from "./Certifications";
 
 const About = () => {
+  const [points, setpoints] = useState("skill");
+
   return (
     <>
       <div id="about" className="text-center py-10">
@@ -14,7 +18,7 @@ const About = () => {
           About
         </h4>
       </div>
-      <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6 md:grid-cols-2  lg:px-48">
+      <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6 md:grid-cols-2 md:px-10 lg:px-48 px-8">
         <AboutChild
           img={fast}
           title="fast"
@@ -36,100 +40,71 @@ const About = () => {
           subTitle="Websites don't have to be static, I love making pages come to life."
         />
       </div>
-      <div className="grid lg:grid-cols-2 gap-4 lg:px-48">
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-4 md:px-10 lg:px-48 px-8 mt-7">
         <div>
-          <div class="avatar flex justify-center mt-6">
+          <div class="avatar block mx-auto mt-6">
             <div class="w-[300px] mask mask-hexagon ">
               <img src={myImage} alt="" />
             </div>
           </div>
-          <div className="text-center ">
-            <h1 className="text-3xl font-bold text-primary py-4 ">
-              Who's this guy?
-            </h1>
-            <p className="text-[18px]">
-              I'm a Front-End Developer. I have serious passion for UI effects,
-              <br /> animations and creating intuitive, dynamic user
-              experiences. <br />
-              <span className="text-[#00A1A7] font-bold">
-                Let's make something special.
-              </span>
-            </p>
+          <div className="space-x-8 mt-7">
+            <button
+              onClick={() => setpoints("skill")}
+              className={`text-xl font-bold ${
+                points === "skill" ? "text-secondary " : ""
+              }`}
+            >
+              Skills
+            </button>
+            <button
+              onClick={() => setpoints("certi")}
+              className={` text-xl font-bold ${
+                points === "certi" ? "text-secondary " : ""
+              }`}
+            >
+              Education &amp; Certification
+            </button>
+          </div>
+          <div>
+            {points === "skill" && <Skills />}
+            {points === "certi" && <Certifications />}
           </div>
         </div>
-        <div className=" flex  items-center px-4 lg:px-0">
-          <div>
-            <h1 className="text-3xl font-bold  lg:text-primary">Skills</h1>
-            <div className="mt-2">
-              <h1 className="text-xl font-bold text-primary  mb-2">
-                Front-End
-              </h1>
-              <div className="">
-                <ul className="flex flex-col lg:flex-row  my-2 gap-3">
-                  <li className="bg-secondary text-white ml-2 px-4 py-0 overflow-hidden">
-                    HTML
-                  </li>
-                  <li>
-                    <li className="bg-secondary text-white px-4 py-0 ml-2">
-                      CSS
-                    </li>
-                  </li>
-                  <li className="bg-secondary text-white px-4 py-0 ml-2">
-                    Tailwind
-                  </li>
-                  <li className="bg-secondary text-white px-4 py-0 ml-2">
-                    Bootstrap
-                  </li>
-                  <li className="bg-secondary text-white px-4 py-0 ml-2">
-                    JavaScript
-                  </li>
-                  <li className="bg-secondary text-white px-4 py-0 ml-2 ">
-                    React
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-2">
-              <h1 className="text-xl font-bold text-primary  mb-2">Back-End</h1>
-              <div className="">
-                <ul className="flex flex-col lg:flex-row  my-2 gap-3">
-                  <li className="bg-secondary text-white ml-2 px-4 py-0 overflow-hidden">
-                    Node Js
-                  </li>
-                  <li className="bg-secondary text-white px-4 py-0 ml-2">
-                    Express Js
-                  </li>
-                  <li className="bg-secondary text-white px-4 py-0 ml-2">
-                    MongoDb
-                  </li>
-                  <li className="bg-secondary text-white px-4 py-0 ml-2">
-                    Firebase Authentication
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-2">
-              <h1 className="text-xl font-bold text-primary  mb-2">Tools</h1>
-              <div className="">
-                <ul className="flex flex-col lg:flex-row  my-2 gap-3">
-                  <li className="ml-2 bg-secondary text-white px-4 py-0 overflow-hidden">
-                    Vs Code
-                  </li>
-                  <li className="bg-secondary text-white px-2 py-0 ml-2">
-                    Git
-                  </li>
-                  <li className="bg-secondary text-white px-2 py-0 ml-2">
-                    Chroome Dev Tools
-                  </li>
-                  <li className="bg-secondary text-white px-2 py-0 ml-2">
-                    Firebase
-                  </li>
-                  <li className="bg-secondary text-white px-2 py-0 ml-2">
-                    Netlify
-                  </li>
-                  <li className="bg-secondary text-white  py-0 ml-2">Heroku</li>
-                </ul>
-              </div>
+        <div className=" ">
+          <h1 className="text-3xl font-bold text-primary py-4 lg:mt-8 ">
+            Who's this guy?
+          </h1>
+          <p className="text-[18px] ">
+            I'm a Front-End Developer. I have serious passion for UI effects,
+            <br /> animations and creating intuitive, dynamic user experiences.{" "}
+            <br />
+            <span className="text-[#00A1A7] font-bold">
+              Let's make something special.
+            </span>
+          </p>
+          <div className="mt-52 lg:hidden hidden md:block">
+            <h1 className="text-xl font-bold text-primary  mb-2">Tools</h1>
+            <div className="">
+              <ul className="flex flex-col lg:flex-row   gap-3">
+                <li className="ml-2 bg-secondary text-white px-2 w-40 py-0 overflow-hidden">
+                  Vs Code
+                </li>
+                <li className="bg-secondary text-white px-2 w-40 py-0 ml-2">
+                  Git
+                </li>
+                <li className="bg-secondary text-white px-2 w-40 py-0 ml-2">
+                  Chroome Dev Tools
+                </li>
+                <li className="bg-secondary text-white px-2 w-40 py-0 ml-2">
+                  Firebase
+                </li>
+                <li className="bg-secondary text-white px-2 w-40 py-0 ml-2">
+                  Netlify
+                </li>
+                <li className="bg-secondary text-white w-40   py-0 ml-2">
+                  Heroku
+                </li>
+              </ul>
             </div>
           </div>
         </div>

@@ -6,22 +6,14 @@ import { RiLinkedinFill } from "react-icons/ri";
 import { FiChevronsUp } from "react-icons/fi";
 
 const Footer = () => {
-  const top = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  // const top = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
   return (
     <div className="bg-[#111827]">
-      <div className="relative mt-0">
-        <span
-          className="block mx-auto bg-secondary cursor-pointer text-3xl h-14 text-white  w-14"
-          onClick={top}
-        >
-          <FiChevronsUp className="ml-3 " />
-        </span>
-      </div>
       <div className="  h-72 flex items-center justify-center">
         <div className="space-y-8">
           <div className="flex space-x-3 font-bold text-white ">
